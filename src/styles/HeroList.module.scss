@@ -1,0 +1,50 @@
+@import './colors';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+
+  .data {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style-type: none;
+    margin: auto;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: 30px;
+
+    &__item,
+    &__item_prev,
+    &__item_next {
+      width: 25px;
+      height: 25px;
+      display: inline-flex;
+      justify-content: center;
+      color: $main;
+      border: 1px solid $main;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    &__item:hover,
+    &__item_prev:hover,
+    &__item_next:hover {
+      color: $white;
+      background-color: $main;
+    }
+
+    &__item_active a {
+      color: $white;
+      background-color: $main;
+    }
+  }
+}
